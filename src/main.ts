@@ -1,23 +1,6 @@
 // import必要的套件
-import { Controller, Module, Get } from "@nestjs/common";
+import { AppModule } from "./app.module";
 import { NestFactory } from "@nestjs/core";
-
-// 建立Controller處理HTTP request
-@Controller()
-class AppController {
-    // 處理GET / 的request
-    @Get()
-    getRootRoute() {
-        // 回傳字串 'Hi there!'
-        return 'Hi there!';
-    }
-}
-
-// 建立Module包含定義好的AppController
-@Module({
-    controllers: [AppController]
-})
-class AppModule {}
 
 // 建立非同步的bootstrap function來啟動NestJS server
 async function bootstrap() {
